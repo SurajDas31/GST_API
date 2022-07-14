@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4" th:text="${root.data.lgnm}">Hello, world!</h1>
+        <p class="lead"
+           th:text="'Address: ' + ${root.data.pradr.addr.bnm +' '+ root.data.pradr.addr.st +' '+ root.data.pradr.addr.loc +' '+ root.data.pradr.addr.bno}">
+            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+            content or information.</p>
+        <p class="lead" th:text="'City: '+${root.data.pradr.addr.dst}"></p>
+        <p class="lead" th:text="'State: '+${root.data.pradr.addr.stcd}"></p>
+        <p class="lead" th:text="'Pincode: '+${root.data.pradr.addr.pncd}"></p>
+        <hr class="my-4">
+        <p class="lead" th:text="'GST: '+${root.data.gstin}"></p>
+        <p class="lead" th:text="'Status: '+${root.data.sts}"></p>
+        <p class="lead" th:text="'Last Updated: '+${root.data.lstupdt}"></p>
+        <p class="lead" th:text="'Business Type: '+${root.data.pradr.ntr}"></p>
+    </div>
+</div>
+</body>
+</html>
